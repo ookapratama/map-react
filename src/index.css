@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading font-bold text-slate-900;
+  }
+}
+
+@theme {
+  --font-heading: "Outfit", sans-serif;
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-primary-light: #eef2ff;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-xl font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border border-slate-200 hover:bg-slate-50 text-slate-700 px-5 py-2.5 rounded-xl font-semibold transition-all;
+  }
+
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/30;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-slate-200 p-6;
+  }
+}
